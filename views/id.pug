@@ -1,0 +1,17 @@
+include partials/header
+
+div.container
+	div.row
+		.col-md-9.offset-md-1#loginBox
+
+			div.account-wall
+			- if (userDataMessage){
+				p #{userDataMessage}
+			-}else {	
+				a(href='/list/'+poetryAuthor) #{poetryAuthor}
+				//- pug.render(#{poetryTitle})
+				br
+				p !{poetryText}
+			-}
+br
+include partials/footer

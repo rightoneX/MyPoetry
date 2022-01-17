@@ -1,0 +1,14 @@
+include partials/header
+.container-fluid
+	.container(style="min-height:10em;")
+		p account
+		- if (userData){
+			p #{userData[0].firstName}
+			p #{userData[0].lastName}
+			p #{userData[0].email}		
+			p #{userData[0].password}							
+		- }		
+
+
+br
+include partials/footer
